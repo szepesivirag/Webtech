@@ -88,11 +88,6 @@ td {
     
 }
 
-.navbar > li > a:hover{
-    background-color: rgb(211, 143, 41);
-    color: #b628289f;
-}
-
 address{
     margin-top: 20%;
     font-size: larger;
