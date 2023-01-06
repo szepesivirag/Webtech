@@ -115,27 +115,25 @@ Középre igazítva létre hoztam egy táblázatot amiben megjelenik az összes 
   
   ## példa a listára:
   ```ruby
-    <header>
+ <ol style="background-color: rgba(216, 135, 135, 0.137)">
+            <li>Magyar hangja... </li>
+            <li>TopGun: Maverick</li>
+            <li>Ahol a folyami rákok élnek</li>
+            <li>Nyugaton a helyzet változatlan</li>
+            <li>Szeretem a férjemet</li>
+            <li>Batman</li>
+            <li>A szomorúság hátomszöge</li>
+            <li>Mindent egy lapra</li>
+            <li>Vérapó</li>
+            <li>Elvis</li>
+        </ol>
 
-        <div class="bg-text">
-          <h1 align="center" style="color:rgb(211, 143, 41)">Web Technológiák Beadandó</h1>
-          <p h2 align="center" style="color:rgb(194, 62, 62)">Szepesi Glória Virág</p>
-        </div>
-    
-        <ul class="navbar">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="lists.html">Lists</a></li>
-          <li><a href="form.html">Form</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-    
-    </header>
 ```
 
 # Form
 A Form oldal mint a nevéből is kiderül egy formot jelenít meg. Ide küldhető bármilyen hozzászólás, észrevétel, helyesírási hiba javítás :). 
 Ezen az oldaon belül több esetben is internal style-ba szerkesztem az oldalt. A html küdon belül adom meg a stílusjegyeket.
-## A From html kódja:
+## A Form html kódja:
 
 ```ruby
     <div class="form">
@@ -199,6 +197,8 @@ address{
 }
 
 ```
+![image](https://user-images.githubusercontent.com/72697467/211093557-62d7b4f3-f11a-4a23-8439-2867c97e64fa.png)
+
 # CSS- Styling
 A css kódban lévő kód határozza meg az egységes részeket a html-ben. Aminek nincs szüksége egyedi stílus igazításra az az eredeti css alapján kerül megformázásra.
 
