@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Firework</title>
+    <link rel="stylesheet" href="../style/styles.css">
+    <style>
+        .form {
+            margin-top: 20%;
+            margin-left: 40%;
+            border: 10px solid rgb(238, 189, 149);
+            background-color: rgba(57, 26, 2, 0.848);
+            width: 300px;
+            font-size: 20px;
+            padding: 10px;
+            color: rgb(238, 189, 149)
+        }
+
+        input {
+            margin-top: 8px;
+            margin-bottom: 5px;
+            background-color: rgb(238, 189, 149);
+            color: #b628289f;
+            font-size: 20px;
+        }
+
+        submit {
+            margin-left: 50px;
+            background-color: rgb(238, 189, 149);
+            color: #3e3131db;
+            font-size: 15px;
+            border: 4px solid #b628289f;
+            border-radius: 10px;
+            width: 60px;
+        }
+
+        textarea{
+            background-color: rgb(238, 189, 149);
+            color: #000000a0;
+        }
+        #formContainer{
+            width: 100%;
+            height: 600px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="../src/scripts/firework.js"></script>
+    <script>
+        $(document).ready(function(){
+            let audio = new Audio('../src/assets/firework.mp3');
+            $("#sendButton").click(function(){
+                let nameInputValue = $("#nameInput").val();
+                let dateInputValue = $("#dateInput").val();
+                let textboxValue = $("#textBox").val();
+
+                let isEveryInputCorrect = (nameInputValue || dateInputValue || textboxValue) !== (undefined || null || "");
+                
+                if(isEveryInputCorrect){
+                    $("#formContainer").fireworks();
+                    jQuery("#formContainer").before(jQuery("canvas"));
+                    audio.play();
+                }else{
+                    alert("Some of the inputs are empty int the form");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+
+        <div class="bg-text">
+          <h1 align="center" style="color:rgb(238, 189, 149)">Web Technológiák Beadandó</h1>
+          <p h2 align="center" style="color:rgb(194, 62, 62)">Szepesi Glória Virág</p>
+        </div>
+    
+        <ul class="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="lists.html">Lists</a></li>
+          <li><a href="form.html">Form</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="firework.html">Firework</a></li>
+        </ul>
+    
+      </header>
+
+      <div id="formContainer">
+        <div class="form">
+            <form id="targetForm">
+                <span id="formName">Name:</span><br>
+                <input id="nameInput" type="text"><br>
+                <span id="formDate">Birth date:</span><br>
+                <input id="dateInput" type="date"><br>
+                <span id="text">Message: </span><br><br>
+                <textarea id="textBox" rows="5" cols="30"></textarea><br><br>
+                <submit id="sendButton" type="button">Send</submit>
+            </form>
+        </div>
+      </div>
+</body>
+</html>
